@@ -16,7 +16,6 @@ class User{
 	
 }
 
-
 public class ABADemo {  
 	static AtomicReference<Integer> aa = new AtomicReference<Integer>(100);
 	static AtomicStampedReference<Integer> bb = new AtomicStampedReference<Integer>(100, 1);
@@ -65,14 +64,17 @@ public class ABADemo {
 		},"t3").start();
 		
 		new Thread(()->{
-			int stamp =bb.getStamp();
-			System.out.println(Thread.currentThread().getName()+"\t第一次版本号："+stamp);
+			int feature =bb.getStamp();
+			System.out.println(Thread.currentThread().getName()+"\t第一次版本号："+feature);
 			try {
 				TimeUnit.SECONDS.sleep(3);
-			} catch (Exception e2) {
+			} catch (Exception e2) {	
+				
+				
+				
 				// TODO: handle exception
 			}
-			boolean result=bb.compareAndSet(100, 2019, stamp, stamp+1);
+			boolean result=bb.compareAndSet(100, 2019, feature, feature+1);
 			System.out.println(Thread.currentThread().getName()+"\t t4线程成功否："+result+"\t当前实际版本号："+bb.getStamp());
 			System.out.println("当前实际值："+bb.getReference());
 			

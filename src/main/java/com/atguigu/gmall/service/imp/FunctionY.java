@@ -35,7 +35,7 @@ public class FunctionY {
         	   String name = v.get("name").toString()+v.get("price").toString();
         	   int num =1;
                boolean flag = !ids.contains(name);
-               if(!flag) {
+               if(!flag) {	
             	   count.add(num);
                }
                ids.add(name);

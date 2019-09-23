@@ -11,8 +11,8 @@ public class ReentrantLockDemo {
 	}
 	public static void main(String[] args) {
 		Lock lock = new ReentrantLock();
-		BigDecimal a = new BigDecimal(0.2);
-		BigDecimal b = new BigDecimal(0.3);
+		BigDecimal a = new BigDecimal("0.2");
+		BigDecimal b = new BigDecimal("0.3");
 		
 		System.out.println(b.subtract(a));
 	}

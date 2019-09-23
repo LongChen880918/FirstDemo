@@ -24,7 +24,7 @@ public  class Voliate {
 				TimeUnit.SECONDS.sleep(3);
 				myData.addT060();
 				System.out.println(Thread.currentThread().getName()+"\t updated number value:"+myData.num);
-			} catch (Exception e) {
+			} catch (Exception e) { 
 				// TODO: handle exception
 				e.printStackTrace();
 			}

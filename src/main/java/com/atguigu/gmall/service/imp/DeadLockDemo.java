@@ -1,10 +1,10 @@
-package com.atguigu.gmall.service.imp;
+ package com.atguigu.gmall.service.imp;
 
 import java.util.concurrent.TimeUnit;
 
 /**
  * 
- * @author ASUS
+ * @author ASUS 
  *	死锁是指两个或两个以上的进程在执行过程中，
  *因争夺资源而造成的一种互相等待的现象
  */

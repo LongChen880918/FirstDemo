@@ -38,14 +38,14 @@ public class FunctionX {
 		Map<String, List<Map<String, Object>>> glist = list.stream().collect(Collectors.groupingBy(e -> e.get("SFZH").toString()));
 		
 		list.stream().collect(Collectors.groupingBy(e->e.get("SFZH").toString()));
-		
-		
+		  
+		System.out.println(glist);
 		glist.forEach((k,slist)->{
 		Map<String,Object> nmap=new HashMap<>();
 		IntSummaryStatistics sumcc = slist.stream().collect(Collectors.summarizingInt(e->Integer.valueOf("1")));
 		
 		IntSummaryStatistics intSummaryStatistics = slist.stream().collect(Collectors.summarizingInt(e->Integer.valueOf("1")));
-		
+		System.out.println(sumcc.toString());
 		
 		if(sumcc.getSum()>1) {
 			slist.forEach(x->{
